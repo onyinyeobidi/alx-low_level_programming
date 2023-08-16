@@ -6,12 +6,12 @@
  * Return: the absolute value of int
  */
 
-int _abs(int g)
+int _abs(int n)
 
 {
-	if (g >= 0)
+	if (n >= 0)
 	{
-		return (g);
+		return (n);
 	}
-	return (-g);
+	return (-n);
 }
