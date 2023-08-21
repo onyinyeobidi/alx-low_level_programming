@@ -7,19 +7,12 @@
  */
 
 void _puts(char *str)
-
 {
-		int count = 0
+			int y;
 
-		while (count >= 0)
-
-		{
-		if (str[count] == '\0')
-		{
-		_putchar('\n');
-		break
-		}
-		_putchar(str[count]);
-		count++;
-		}
+			for (y = 0; str[y] != '\0'; y++)
+			{
+			_putchar(str[y]);
+			}
+			_putchar ('\n');
 }
