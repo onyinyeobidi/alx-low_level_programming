@@ -7,9 +7,7 @@
  * @size: size
  * Return: void
  */
-
 void print_buffer(char *b, int size)
-
 {
 	int o, j, i;
 
@@ -47,6 +45,6 @@ void print_buffer(char *b, int size)
 			}
 		  printf("\n");
 			  o += 10;
+		}
 	}
-}
 }
