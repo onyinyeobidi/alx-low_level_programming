@@ -1,24 +1,29 @@
 #include "main.h"
-#include <stdio.h>
 /**
- * print_number - function that prints an integer
- * @n: Parameter
- * Return: 0
+ * _strncat - concatenate two strings
+ * using at most n bytes from src
+ * @dest: input value
+ * @src: input value
+ * @n: input value
+ * Return: dest
  */
-void print_number(int n)
+char *_strncat(char *dest, char *src, int n)
 {
-	unsigned int i;
+	int i;
+	int j;
 
-	i = n;
-
-	if (n < 0)
+	i = 0;
+	while (dest[i] != '\0')
 	{
-		_putchar('-');
-		i = -n;
+		i++;
 	}
-	if (i / 10 != 0)
+	j = 0;
+	while (j < n && src[j] != '\0')
 	{
-		print_number(i / 10);
+		dest[i] = src[j];
+		i++;
+		j++;
 	}
-	_putchar((i % 10) + '0');
+	dest[i] = '\0';
+	return (dest);
 }
