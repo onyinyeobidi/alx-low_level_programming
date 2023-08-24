@@ -1,29 +1,24 @@
 #include "main.h"
+#include <stdio.h>
 /**
- * _strncat - concatenate two strings
- * using at most n bytes from src
- * @dest: input value
- * @src: input value
- * @n: input value
- * Return: dest
+ * print_number - function that prints an integer
+ * @n: Parameter
+ * Return: 0
  */
-char *_strncat(char *dest, char *src, int n)
+void print_number(int n)
 {
-	int h;
-	int j;
+	unsigned int i;
+	
+	i = n;
 
-	h = 0;
-	while (dest[h] != '\0')
+	if (n < 0)
 	{
-		h++;
+		_putchar('-');
+		i = -n;
 	}
-	h = 0;
-	while (j < n && src[j] != '\0')
+	if (i / 10 != 0)
 	{
-		dest[h] = src[j];
-		h++;
-		j++;
+		print_number(i / 10);
 	}
-	dest[h] = '\0';
-	return (dest);
+	_putchar((i % 10) + '0');
 }
