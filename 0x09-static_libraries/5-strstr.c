@@ -1,8 +1,8 @@
 #include "main.h"
 /**
  * _strstr - Entry point
- * @haystack: input
- * @needle: input
+ * @haystack: Function parameter 1
+ * @needle: Function parameter 2
  * Return: Always 0 (Success)
  */
 char *_strstr(char *haystack, char *needle)

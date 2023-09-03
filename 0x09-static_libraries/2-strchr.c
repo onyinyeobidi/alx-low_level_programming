@@ -1,18 +1,18 @@
 #include "main.h"
 /**
  * _strchr - Entry point
- * @s: input
- * @c: input
+ * @s: Function parameter 1
+ * @c: Function parameter 2
  * Return: Always 0 (Success)
  */
 char *_strchr(char *s, char c)
 {
-	int h = 0;
+	int i = 0;
 
-	for (; s[h] >= '\0'; h++)
+	for (; s[i] >= '\0'; i++)
 	{
-		if (s[h]  == c)
-			return (&s[h]);
+		if (s[i] == c)
+			return (&s[i]);
 	}
 	return (0);
 }

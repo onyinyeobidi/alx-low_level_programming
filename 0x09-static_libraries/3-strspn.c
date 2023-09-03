@@ -1,28 +1,29 @@
 #include "main.h"
 /**
  * _strspn - Entry point
- * @s: input
- * @accept: input
+ * @s: Function parameter 1
+ * @accept: Function parameter 2
  * Return: Always 0 (Success)
  */
 unsigned int _strspn(char *s, char *accept)
 {
 	unsigned int n = 0;
-		int w;
 
-		while (*s)
+	int m;
+
+	while (*s)
+	{
+		for (m = 0; accept[m]; m++)
 		{
-			for (w = 0; accept[w]; w++)
+			if (*s == accept[m])
 			{
-				if (*s == accept[w])
-				{
-					n++;
-					break;
-				}
-				else if (accept[w + 1] == '\0')
-					return (n);
+				n++;
+				break;
 			}
-				s++;
-			}
-			return (n);
+			else if (accept[m + 1] == '\0')
+				return (n);
+		}
+		s++;
+	}
+	return (n);
 }
