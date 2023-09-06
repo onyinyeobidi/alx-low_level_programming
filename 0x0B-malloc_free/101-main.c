@@ -17,15 +17,14 @@ void print_tab(char **tab)
 	}
 }
 /**
- * main - check the code for ALX School students.
- * @strtow - very important 
- * Return: 1 if an error occurred, 0 otherwise
+ * main - check the code for ALX sxhool students.
+ * Return: 1 if an error occured, 0 otherwise
  */
 int main(void)
 {
 	char **tab;
 
-	tab = strtow("alx School #cisfun ");
+	tab = strtow("      ALX School         #cisfun      ");
 	if (tab == NULL)
 	{
 		printf("Failed\n");
